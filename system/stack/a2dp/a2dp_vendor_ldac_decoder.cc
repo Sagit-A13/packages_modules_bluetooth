@@ -123,6 +123,8 @@ static void* load_func(const char* func_name) {
 bool A2DP_VendorLoadDecoderLdac(void) {
   if (ldac_bco_lib_handle != NULL) return true;  // Already loaded
 
+  return false; // Huexxx: libldacBT_bco.so is not on planet earth... avoid spam!
+
   // Initialize the control block
   memset(&a2dp_ldac_decoder_cb, 0, sizeof(a2dp_ldac_decoder_cb));
 
